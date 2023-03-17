@@ -1,0 +1,39 @@
+{
+    "pages": [
+      "pages/login/login",
+      "pages/home/home",
+      "pages/monitor/monitor",
+      "pages/my/my",
+       "pages/regUser/regUser"
+
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "Weixin",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+      "list": [{
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "./static/icons/home.png",
+        "selectedIconPath": "./static/icons/home-active.png"
+      },{
+        "pagePath": "pages/monitor/monitor",
+        "text": "监控",
+        "iconPath": "./static/icons/monitor.png",
+        "selectedIconPath": "./static/icons/monitor-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "./static/icons/my.png",
+        "selectedIconPath": "./static/icons/my-active.png"
+      }
+    ],
+    "selectedColor": "#d81e06"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

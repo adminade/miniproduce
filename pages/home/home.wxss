@@ -1,0 +1,219 @@
+/* pages/home/home.wxss */
+
+.container{
+padding:0 0;
+}
+.baseInformation{
+  height: 180rpx;
+  width: 100%;
+  /* background-color: pink; */
+  box-sizing: border-box;
+  border: 1px solid #bbbbbb;
+  box-shadow: 0 2px 3px #bbbbbb;
+
+}
+.baseInformation text{
+  font-size: 14px;
+}
+.box1{
+  margin-top:50rpx ;
+  margin-left:35rpx ;
+  float: left;
+}
+.box2{
+  margin-top:50rpx ;
+  /* margin-left:30rpx ; */
+  float: right;
+
+}
+.baseInformation text{
+  
+  display: block;
+}
+.t3{
+  padding-top: 40rpx;
+}
+.t4{
+  padding-top: 40rpx;
+}
+
+/* 菜单栏区域----------------- */
+.menu_check{
+  margin-top: 60rpx;
+  height: 226rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  border: 1px solid #bbbbbb;
+  box-shadow: 0 2px 3px #bbbbbb;
+
+}
+.menu_check view{
+  width: 186rpx;
+  padding:0 0;
+  margin: 0 0;
+}
+.menu_check .menu1{
+  display: flex;
+  flex-direction: column;
+  /* flex-flow: center; */
+  justify-content: center;
+  align-items: center;
+
+}
+.menu_check .menu2{
+  display: flex;
+  flex-direction: column;
+  /* flex-flow: center; */
+  justify-content: center;
+  align-items: center;
+
+}
+.menu_check .menu3{
+  display: flex;
+  flex-direction: column;
+  /* flex-flow: center; */
+  justify-content: center;
+  align-items: center;
+
+}
+.menu_check .menu4{
+  display: flex;
+  flex-direction: column;
+  /* flex-flow: center; */
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+/* myBrand区域 */
+.brand_text{
+  padding-top: 10;
+  display: block;
+  height: 36rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+    
+}
+.myBrand{
+  margin-top: 60rpx;
+  height: 236rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid #bbbbbb;
+  box-shadow: 0 2px 3px #bbbbbb;
+
+}
+.myBrand .menu_logo{
+  display: flex;
+  flex-direction: row;
+}
+.myBrand .menu_logo view{
+  width: 186rpx;
+  height: 196rpx;
+  padding:0 0;
+  margin: 0 0;
+}
+.myBrand .menu_logo  .menu1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.myBrand .menu_logo .menu2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.myBrand .menu_logo .menu3{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.myBrand .menu_logo .menu4{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+ /* 事件区域 */
+
+/* 事件列表 */
+.alarm_list{
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+
+.alarmBox{
+  width: 100%;
+  font-size: 24rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+ .showAlarm_0{
+  margin-top: 16rpx;
+  text-indent: 20rpx;
+  /* width: 660rpx; */
+  height: 92rpx;
+  line-height: 92rpx;
+  border-top: 1rpx solid #eee;
+  position: relative;
+  background-color: red;
+  display: flex; 
+  /* justify-content: flex-start;  */
+
+}
+
+.alarm_time{
+ display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+.alarm_text{
+  display: flex; 
+  justify-content:flex-start;
+  align-items: center;
+}
+ .alarm_icon0{ 
+   display: flex; 
+  justify-content: flex-end; 
+  align-items: center;
+  flex: 1; /* 占满剩余空间 */
+
+}
+
+
+
+ .showAlarm_1{
+   margin-top: 16rpx;
+  text-indent: 20rpx;
+  /* width: 660rpx; */
+  height: 92rpx;
+  line-height: 92rpx;
+  border-top: 1rpx solid #eee;
+  position: relative;
+  background-color: #9b8ce1;
+  text-indent: 20rpx;
+  /* width: 660rpx; */
+  display: flex;
+ }
+
+ .alarm_icon1{
+  display: flex; 
+  justify-content: flex-end; 
+  align-items: center;
+  flex: 1; /* 占满剩余空间 */
+ }

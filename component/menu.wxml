@@ -1,0 +1,6 @@
+<!--component/menu.wxml-->
+<view class="container">
+  <image src="{{image}}" mode=""/>
+  <!-- <image src="D:\my.code\1.0.1养殖管理\static\image\猪头像.png" mode=""/> -->
+  <text>{{text}}</text>
+</view>

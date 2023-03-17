@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "menu":"../../component/menu"
+  },
+  "backgroundTextStyle": "dark",
+  "navigationBarTitleText": "首页"
+}

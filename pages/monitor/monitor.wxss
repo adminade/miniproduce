@@ -1,0 +1,23 @@
+/* pages/monitor/monitor.wxss */
+.container {
+  /* position: absolute;
+  /* position: relative; */
+  /* top: 1200rpx;
+  bottom: 0;
+  left: 0;
+  right: 0;  */
+  margin: 0;
+  padding: 0;
+  /* 这个图表是渲染出来的，不知道高度多少，所以不好直接设置height，怎么办呢 设置定位！ */
+  height: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}

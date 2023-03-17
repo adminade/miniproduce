@@ -1,0 +1,98 @@
+<!--pages/home/home.wxml-->
+<view class="container" disabled="true" >
+  <view class="baseInformation">
+    <view class="box1">
+      <text class="t1">操作员: {{username}}</text>    
+      <text class="t3">单位: {{brand}}</text>
+    </view>
+    <view class="box2">
+      <text class="t2">手机: {{phone}}</text>
+      <text class="t4">日期: {{date}}</text> 
+    </view>
+</view>
+
+<!-- 菜单栏 ----------------------------------------- -->
+<view class="menu_check">
+  <!--使用组件加载静态资源需要传递组件的相对位置 -->
+   <!-- <menu image="../static/image/信息维护.png"  text="信息维护" class="menu1" >  </menu> -->
+   <view class="menu1">
+     <image src="../../static/image/信息维护.png" mode=""/>
+     <text>信息维护</text>
+   </view>
+   <view class="menu2">
+     <image src="../../static/image/设备报修.png" mode=""/>
+     <text>设备保修</text>
+   </view>
+  <view class="menu3">
+     <image src="../../static/image/今日记录.png" mode=""/>
+     <text>今日记录</text>
+   </view>
+    <view class="menu4">
+     <image src="../../static/image/查看事件.png" mode=""/>
+     <text>查看事件</text>
+   </view>
+</view>
+
+
+<!-- 我的养殖厂--------------- -->
+ <view class="myBrand">
+ <text class="brand_text">我的养殖厂</text>
+  <view class="menu_logo">
+    <view class="menu1">
+     <image src="../../static/image/监控.png" mode=""/>
+     <text>监控</text>
+   </view>
+ <view class="menu2">
+     <image src="../../static/image/饲料营养.png" mode=""/>
+     <text>饲料营养</text>
+   </view>
+    <view class="menu3">
+     <image src="../../static/image/体检数据.png" mode=""/>
+     <text>体检数据 </text>
+   </view>
+    <view class="menu4">
+     <image src="../../static/image/疾病资料.png" mode=""/>
+     <text>疾病资料</text>
+   </view>
+  </view>
+ </view>
+
+<view class="alarmList">
+  <!-- 这里用组件实现 判断是紧急事件用 紧急组件，。 
+    服务器： 定义返回text文本列表
+    前端：下拉框
+    服务器返回 （紧急标识，text文本）， 前端根据紧急标识选择不同的组件展示text文本
+    需要一个事件监听函数，监听服务器api是否有返回事件。 
+    一天内未监听到事件/清空事件列表
+  -->
+</view> 
+
+
+<view class="alarmBox">
+  <text class="alarm_list">事件列表</text>
+     <view wx:for="{{tingsList}}" wx:key="index" class="alarm_for"> 
+    <view class="showAlarm_0" wx:if="{{item.tag == 0}}"   bindtouchstart="touchstart" data-index="{{index}}"  bindtouchend="touchend">
+      <text class="alarm_time">{{alarmTime}}</text>
+      <text class="alarm_text" >{{index}} : {{item.text}}</text>
+      <view class="alarm_icon0">
+        <image src="../../static/image/alarm_0.png" mode=""/>
+      </view>
+    </view>
+   
+    <view class="showAlarm_1" wx:else = "{{item.tag ==1}}" bindtouchstart="touchstart"  data-index="{{index}}"    bindtouchend="touchend">
+      <text class="alarm_time">{{alarmTime}}</text>
+      <text class="alarm_text">{{index}} : {{item.text}}</text>
+      <view class="alarm_icon1">
+        <image src="../../static/image/alarm_1.png" mode=""/>
+      </view>
+    
+    </view>
+
+</view>
+</view>
+
+<button  bindtap="addone">添加事件</button>
+
+
+
+</view>

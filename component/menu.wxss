@@ -1,0 +1,10 @@
+/* component/menu.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+}
+image{
+  padding-left: 16rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
