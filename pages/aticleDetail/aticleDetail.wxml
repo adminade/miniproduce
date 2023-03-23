@@ -1,0 +1,36 @@
+<!--pages/aticleDetail/aticleDetail.wxml-->
+<!-- <view bindsubmit="onsubmit">
+  <text>标题</text>
+  <textarea  id="a1" name='title'  value="{{articleList.name}}" />
+  <text>临床症状表现</text>
+  <textarea id="a2"  name="bx"  value="{{articleList.bx}} " maxlength="2000" />
+  <text>防治手段</text>
+  <textarea  id="a3" name='fz'  value="{{articleList.cs}}" maxlength="2000" />
+  <text>备注</text>
+  <textarea id="a4"  name='bz' value="{{articleList.bz}}"  />
+
+  </view> -->
+
+
+  <!--pages/aticleDetail/aticleDetail.wxml-->
+
+<swiper class="swiper" autoplay indicator-dots interval="8000"  circular>
+  <swiper-item wx:for="{{imageList}}" wx:key="index">
+    <image src="{{item}}" mode="" /> 
+    <!-- 375*220 -->
+  </swiper-item>
+</swiper>
+
+<view bindsubmit="onsubmit">
+  <text class="biaoti">病属名:  </text>
+  
+  <text id="a1" name='title' >{{articleList.name}}\n</text>
+  <text  class="biaoti">临床症状表现:\n </text>
+  <text id="a2" name='bx' >{{articleList.bx}}\n</text>
+  <text  class="biaoti">防治手段:\n</text>
+  <text id="a3" name='fz' >{{articleList.cs}}\n</text>
+  <!-- <text class="biaoti">备注:\n</text> -->
+  <!-- <text id="a4" name='bz' >{{articleList.bz}}</text> -->
+
+  </view>
+ 

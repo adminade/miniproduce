@@ -66,20 +66,28 @@ longPress(location){
           tingsList:[...this.data.tingsList.slice(0,location),...this.data.tingsList.slice(location+1)]
         })
         console.log('be done')
-        // 判断紧急事件为0级时候，发送短信提醒用户
-        utils.myRequest({
-          url:'utils/localserver/requestSMS',
-          method:'GET',
-          data:{}
-        }).then(res =>{
-          console.log(res.data)
-        })
+        // 判断紧急事件为0级时候，发送短信提醒用户  @!!!!!!!!!!!!!
+        // utils.myRequest({
+        //   url:'utils/localserver/requestSMS',
+        //   method:'GET',
+        //   data:{}
+        // }).then(res =>{
+        //   console.log(res.data)
+        // })
       }
      console.log(res.confirm) 
     }
   })
+ 
 
 },
+
+goto_desase_resoure(){
+  wx.navigateTo({
+    url: '/pages/desease_resourse/desease_resourse',
+  })
+},
+
   /**
    * 生命周期函数--监听页面加载
    */

@@ -1,0 +1,23 @@
+
+<view>
+  <view class="search"  bindtap="gotoSearch">
+    <view>
+      <image src="../../static/icons/search.png" mode=""/>
+    </view>
+    <view>
+    <!-- <input type="text" placeholder="请输入搜索猪病"/>   -->
+    <text>搜索猪病</text>  
+    </view>
+  </view>
+
+  <view class="aticle">
+    <navigator class="nav" wx:for="{{aticle}}" wx:key="index" url="/pages/aticleDetail/aticleDetail?id={{item.id}}&title={{item.name}}">
+      <view>
+        <text>{{item.name}}</text>
+      </view>
+      <view class="imageContainer">
+        <image src="../../static/icons/list.png" mode=""/>
+      </view>
+    </navigator>
+  </view>
+</view>

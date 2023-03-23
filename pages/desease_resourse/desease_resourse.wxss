@@ -1,0 +1,38 @@
+ .search{
+  height: 64rpx;
+  width: 100%;
+  border:1px solid #bebeaf;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15rpx;
+}
+ .search image{
+   height: 58rpx;
+  width: 58rpx;
+  }
+.search text {
+  font-size: 12px;
+  color: #bebeaf;
+  margin-left: 10rpx;
+}
+
+.nav{
+  height: 92rpx;
+  width: 100%;
+  border-bottom:1px solid #161515 ;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+} 
+
+.imageContainer{
+margin-left: auto;
+}
+.nav image{
+  /* display: flex; */
+  width: 78rpx;
+  height: 78rpx;
+}

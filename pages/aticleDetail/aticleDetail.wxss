@@ -1,0 +1,16 @@
+/* pages/aticleDetail/aticleDetail.wxss */
+textarea{
+  width: 100%;
+}
+.biaoti{
+  font-weight: bold;
+  padding-bottom: 8rpx;
+}
+.swiper{
+  /* height: 300rpx; */
+  width: 100%;
+}
+.swiper image{
+  height: 440rpx;
+  width: 100%;
+}

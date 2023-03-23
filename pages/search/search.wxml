@@ -1,0 +1,32 @@
+<view class="search"  >
+    <view>
+      <image src="../../static/icons/search.png" mode=""/>
+    </view>
+    <view>
+    <input type="text" placeholder="请输入搜索猪病" bindinput="input" auto-focus/>  
+    </view>
+  </view>
+
+
+<view>
+  <navigator class="nav" wx:for="{{searchResullt}}" wx:key="index"  url="/pages/aticleDetail/aticleDetail?title={{item.name}}">
+      <view>
+        <text> {{item.name}}</text>
+      </view>
+      <view class="imageContainer">
+        <image src="../../static/icons/list.png" mode=""/>
+      </view>
+  </navigator>
+
+</view>
+
+<!-- 
+
+  <navigator class="nav" wx:for="{{aticle}}" wx:key="index" url="/pages/aticleDetail/aticleDetail?id={{item.id}}&title={{item.name}}">
+      <view>
+        <text>{{item.name}}</text>
+      </view>
+      <view class="imageContainer">
+        <image src="../../static/icons/list.png" mode=""/>
+      </view>
+    </navigator> -->

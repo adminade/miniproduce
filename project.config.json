@@ -3,7 +3,12 @@
   "compileType": "miniprogram",
   "libVersion": "2.30.2",
   "packOptions": {
-    "ignore": [],
+    "ignore": [
+      {
+        "value": "/minitest",
+        "type": "folder"
+      }
+    ],
     "include": []
   },
   "setting": {
@@ -24,5 +29,6 @@
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
-  }
+  },
+  "testRoot": "minitest/"
 }

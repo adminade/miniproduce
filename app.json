@@ -4,7 +4,10 @@
       "pages/home/home",
       "pages/monitor/monitor",
       "pages/my/my",
-       "pages/regUser/regUser"
+       "pages/regUser/regUser",
+       "pages/desease_resourse/desease_resourse",
+       "pages/aticleDetail/aticleDetail",
+       "pages/search/search"
 
     ],
     "window": {
@@ -34,6 +37,7 @@
     ],
     "selectedColor": "#d81e06"
     },
+    "lazyCodeLoading": "requiredComponents",
     "style": "v2",
     "sitemapLocation": "sitemap.json"
 }

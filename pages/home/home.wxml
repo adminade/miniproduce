@@ -51,7 +51,7 @@
      <text>体检数据 </text>
    </view>
     <view class="menu4">
-     <image src="../../static/image/疾病资料.png" mode=""/>
+     <image src="../../static/image/疾病资料.png" bindtap="goto_desase_resoure" mode=""/>
      <text>疾病资料</text>
    </view>
   </view>

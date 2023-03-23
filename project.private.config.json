@@ -3,7 +3,8 @@
   "projectname": "%E5%85%BB%E6%AE%96%E7%AE%A1%E7%90%86",
   "setting": {
     "compileHotReLoad": true,
-    "urlCheck": false
+    "urlCheck": false,
+    "bigPackageSizeSupport": true
   },
   "condition": {
     "miniprogram": {
@@ -32,6 +33,13 @@
         {
           "name": "",
           "pathName": "pages/monitor/monitor",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/desease_resourse/desease_resourse",
           "query": "",
           "launchMode": "default",
           "scene": null
