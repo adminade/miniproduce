@@ -1,0 +1,49 @@
+<!--pages/transferHistory/transferHistory.wxml-->
+<view class="contain">
+  <view  class="head">
+  <view class="search"  >
+    <view>
+      <image src="../../static/icons/search.png" mode=""/>
+    </view>
+    <view>
+    <input type="text" placeholder="请输入搜索耳号" bindinput="input" auto-focus/>  
+    </view>
+
+  </view>
+  <button type="primary" class="button1" size="mini"  bindtap="goto_addHouse">管理栏舍</button>
+  <button type="primary" class="button2" size="mini"  bindtap="goto_addTransfer"  >添加</button>
+
+</view>
+<!-- tag用来控制搜索的时候显示值 隐藏这个view，显示 搜索结果-->
+<view  wx:if="{{tag == 0}}">
+    <view class="box"  wx:for="{{histroyList}}"  wx:key="index"> 
+      <view class="view_top" >
+        <text>耳号：{{item.pigNumber}} || 时间：{{item.time}}  || 操作员：{{item.user}}</text>
+       
+      </view>
+      <view class="view_buttom" >
+        <text>转栏数：1 ||  转入舍：{{item.transfer_aim}} 原因：{{item.reason}}</text>
+      </view>
+
+
+    </view>
+
+</view>
+
+<view    wx:if="{{tag == 1}}">
+    <view class="box"  wx:for="{{histroyListSearch}}"  wx:key="index"> 
+      <view class="view_top" >
+        <text>耳号：{{item.pigNumber}} || 时间：{{item.time}}</text>
+       
+      </view>
+      <view class="view_buttom" >
+        <text>转栏数：1 ||  转入舍：{{item.transfer_aim}} 原因：{{item.reason}}</text>
+      </view>
+
+
+    </view>
+</view>
+
+
+
+</view>

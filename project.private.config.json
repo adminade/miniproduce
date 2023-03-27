@@ -4,7 +4,7 @@
   "setting": {
     "compileHotReLoad": true,
     "urlCheck": false,
-    "bigPackageSizeSupport": true
+    "bigPackageSizeSupport": false
   },
   "condition": {
     "miniprogram": {
@@ -40,6 +40,55 @@
         {
           "name": "",
           "pathName": "pages/desease_resourse/desease_resourse",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/infoUpkeep/infoUpkeep",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/dairy/dairy",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/transferHistory/transferHistory",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/addHouse/addHouse",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/addTransfer/addTransfer",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/operateHistory/operateHistory",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/deseaseHistory/deseaseHistory",
           "query": "",
           "launchMode": "default",
           "scene": null

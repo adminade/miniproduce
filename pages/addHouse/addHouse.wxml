@@ -1,0 +1,26 @@
+<!--pages/addHouse/addHouse.wxml-->
+<view class="contain">
+<form bindsubmit="submit">
+  <view class="head"  >
+    <view class="name1">
+      <text>*栏舍名:</text>
+    </view>
+    <view>
+    <input type="text"  name="houseName" placeholder="请输入名称" bindinput="input" auto-focus/>  
+    </view>
+
+  </view>
+  <button type="primary" form-type="submit" class="button1" >添加</button>
+</form>
+
+  <view  class="body">
+    <view   wx:for="{{houseList}}" wx:key='index' class="box">
+    <text>{{item.HouseCate}}   ||   猪头数:{{item.totalCount}}</text>
+    <button type="warn" size="mini" bindtap="deleteHouse"  data-index="{{index}}" >删除</button>
+    </view>
+  </view>
+
+
+
+
+</view>

@@ -1,0 +1,54 @@
+/* pages/addpig/addpig.wxss */
+.box1{
+  display: flex;
+  height: 104rpx;
+  align-items: center;
+}
+.text1{
+  margin-left: 20rpx;
+}
+.input1{
+  width: 560rpx;
+  margin-left: auto;
+
+}
+.contain input{
+  border-bottom: 1px solid #efefee;
+}
+.box2 {
+  display: flex;
+  height: 104rpx;
+  align-items: center;
+}
+.pullselect{
+  border-bottom: 1px solid #000000;
+  padding-left: 20rpx;
+}
+.input2{
+  width: 480rpx;
+  margin-left: auto;
+  border-bottom: 1px solid #efefee;
+}
+.input3{
+  width: 560rpx;
+  margin-left: auto;
+  border-bottom: 1px solid #efefee;
+}
+
+.box2 image{
+  width: 80rpx;
+  height:104rpx ;
+}
+/* .input3{
+  border: 1px solid #000000;
+} */
+.box3{
+  display: flex;
+  height: 150rpx;
+  align-items: center;
+}
+.input3 textarea{
+  border: 1px solid #efefef;
+  height: 100rpx;
+  width: 100%;
+}

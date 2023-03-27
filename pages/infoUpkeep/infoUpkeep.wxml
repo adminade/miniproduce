@@ -1,0 +1,53 @@
+<!--pages/infoUpkeep/infoUpkeep.wxml-->
+<view class="contain">
+  <view class="head">
+    <view  class="title">
+      <text>{{brand}}({{total_number}})</text>
+    </view>
+  </view>  
+  <view  class="num">
+      <view>
+        <text class="num1">{{pigCate['1']}}</text>
+        <text>公猪</text>
+      </view>
+      <view>
+        <text class="num2">{{pigCate['2']}}</text>
+        <text>母猪</text>
+      </view>
+      <view>
+        <text class="num3">{{pigCate['3']}}</text>
+        <text>商品猪</text>
+      </view>
+      
+
+  </view>
+<view class="home" wx:for="{{homeList}}" wx:key="index1" wx:for-index="cateId">  
+<!-- 大框 -->
+  <view wx:for="{{item}}" wx:key="index2"  wx:for-index='id'>
+    <view wx:if="{{id > 0}}" class="item">
+      <image src="{{'../../static/icons/zhushe'+(cateId+1)+'.png'}}" mode=""/>
+    <view>
+      <text>{{item[0]}}\n</text>
+     <text>{{item[1]}}头猪</text>
+    </view>      
+    </view>
+
+  </view>
+</view>
+
+
+
+<view class="buttom">
+  <view  class="info_query" bindtap="goto_info_query">
+    <image src="../../static/icons/1.png" mode=""/>
+    <text>猪只信息查询</text>  
+  </view>
+  <view class="home_manage">
+    <image   src="../../static/icons/zhushe5.png" mode=""/>
+    <text>猪舍管理</text>
+  </view>
+
+</view>
+
+
+</view>

@@ -1,0 +1,63 @@
+<!--pages/addpig/addpig.wxml-->
+<form class="contain"  bindsubmit="submit" >
+    <view class="box1">
+      <view  class="text1">
+        <text>*耳号：</text>
+      </view>
+      <view  class="input1">
+        <input name = "number"  type="text" placeholder="请输入耳号" />
+      </view>
+    </view>
+
+        <picker    bindchange="bindPickerChange" value="{{houseindex}}" range="{{range}}">
+        <!-- 若是对象数组需要指定range-key 指定键的属性名 -->
+          <view class="box2">
+            <view class="text1">
+              <text >*栏舍：</text>
+            </view>            
+            <view class="input2">
+              <text >{{housecate[houseindex].HouseCate}}</text>
+            </view>
+            <view>
+              <image src="../../static/icons/xiasanjiao.png" mode=""/>
+            </view>
+          </view>
+        </picker>
+
+    <view class="box1">
+      <view  class="text1">
+        <text>*入栏时间：</text>
+      </view>
+      <view  class="input1">
+        <input  name = "comeTime"  type="text" value="{{time}}" />
+      </view>
+    </view>
+
+
+    <view class="box1">
+      <view  class="text1">
+        <text>*操作员：</text>
+      </view>
+      <view  class="input1">
+        <input name = "user"  type="text" value="{{user}}" />
+      </view>
+    </view>
+    <view class="box1">
+      <view  class="text1">
+        <text>*原因：</text>
+      </view>
+      <view  class="input1">
+        <input name = "reason"  type="text" placeholder="请输入" />
+      </view>
+    </view>
+
+    <view class="box3">
+      <view  class="text1">
+        <text>*备注：</text>
+      </view>
+      <view  class="input3">
+         <textarea name="explain"  value=""/>
+      </view>
+    </view>
+    <button form-type="submit" type="primary" >添加</button>
+</form >

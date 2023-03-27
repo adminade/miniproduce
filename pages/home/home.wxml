@@ -15,15 +15,15 @@
 <view class="menu_check">
   <!--使用组件加载静态资源需要传递组件的相对位置 -->
    <!-- <menu image="../static/image/信息维护.png"  text="信息维护" class="menu1" >  </menu> -->
-   <view class="menu1">
+   <view class="menu1"  bindtap="goto_infoUpkeep"  >
      <image src="../../static/image/信息维护.png" mode=""/>
      <text>信息维护</text>
    </view>
    <view class="menu2">
      <image src="../../static/image/设备报修.png" mode=""/>
-     <text>设备保修</text>
+     <text>设备报修</text>
    </view>
-  <view class="menu3">
+  <view class="menu3" bindtap = "goto_dairy"  >
      <image src="../../static/image/今日记录.png" mode=""/>
      <text>今日记录</text>
    </view>

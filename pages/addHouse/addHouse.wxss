@@ -1,0 +1,47 @@
+/* pages/addHouse/addHouse.wxss */
+.contain {
+  background-color: #eeeeee;
+}
+.head {
+  height: 110rpx;
+  margin-top: 20rpx;
+  display: flex;
+  background-color: #ffffff;
+  /* border: 1px solid #000000; */
+  align-items: center;
+}
+.name1{
+  width: 128rpx;
+  margin-left: 10rpx;
+}
+.head input{
+  margin-left: 12rpx;
+  border-bottom: 1px solid #efefef;
+  width: 600rpx;
+}
+.button1{
+  margin-top: 20rpx;
+  /* width: 750rpx; */
+}
+.body{
+  display: flex;
+  flex-direction: column;
+}
+.box{
+  height: 96rpx;
+  border: 1px solid #ffffff;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+.box button{
+  margin-right: 0;
+  margin-left: auto;
+  /* justify-self: ; */
+  /* border: 1px solid #000000; */
+  background-color: red;
+  color: #ffffff;
+  /* justify-self: flex-end; */
+}

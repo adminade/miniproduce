@@ -87,6 +87,18 @@ goto_desase_resoure(){
     url: '/pages/desease_resourse/desease_resourse',
   })
 },
+goto_infoUpkeep(){
+  wx.navigateTo({
+    url: '/pages/infoUpkeep/infoUpkeep',
+  })
+
+},
+
+goto_dairy(){
+  wx.navigateTo({
+    url: '/pages/dairy/dairy',
+  })
+},
 
   /**
    * 生命周期函数--监听页面加载

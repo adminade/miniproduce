@@ -1,0 +1,15 @@
+/* pages/infoUpkeepQuery/infoUpkeepQuery.wxss */
+.query{
+  display: flex;
+
+}
+.query input{
+  width: 590rpx;
+  border: 1px solid green;
+  height: 64rpx;
+}
+.query button{
+  margin: 0 0;
+  padding: 0 0 ;
+  width: 160rpx;
+}

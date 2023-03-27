@@ -1,0 +1,34 @@
+/* pages/dairy/dairy.wxss */
+.menu1{
+  display: flex;
+   flex-direction: row; 
+   border: 1px solid #f4f4f4;
+  justify-content: space-between; 
+}
+.box1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+   width: 192rpx;
+   height: 192rpx;
+  border: 1px solid #f4f4f4;
+}
+.contain image{
+  width: 92rpx;
+  height: 92rpx;
+}
+.menu2{
+  margin-top: 100rpx;
+  display: flex;
+   flex-direction: row; 
+   border: 1px solid #f4f4f4;
+  justify-content: space-between; 
+}
+.menu3{
+  margin-top: 100rpx;
+  display: flex;
+   flex-direction: row; 
+   border: 1px solid #f4f4f4;
+  justify-content: space-between; 
+}

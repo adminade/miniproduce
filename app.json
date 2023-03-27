@@ -7,7 +7,20 @@
        "pages/regUser/regUser",
        "pages/desease_resourse/desease_resourse",
        "pages/aticleDetail/aticleDetail",
-       "pages/search/search"
+       "pages/search/search",
+       "pages/infoUpkeep/infoUpkeep",
+       "pages/infoUpkeepQuery/infoUpkeepQuery",
+       "pages/dairy/dairy",
+       "pages/addpig/addpig",
+       "pages/transferHouse/transferHouse",
+       "pages/transferHistory/transferHistory",
+       "pages/addHouse/addHouse",
+       "pages/addTransfer/addTransfer",
+       "pages/operateHistory/operateHistory",
+       "pages/addOperateDairy/addOperateDairy",
+       "pages/deseaseHistory/deseaseHistory",
+       "pages/addDeseaseDairy/addDeseaseDairy"
+
 
     ],
     "window": {
