@@ -1,0 +1,52 @@
+<!--pages/addpig/addpig.wxml-->
+
+<view  class="contain">
+    <form   bindsubmit="submit" >
+    <view class="box1">
+      <view  class="text1">
+        <text>*耳号：</text>
+      </view>
+      <view  class="input1">
+        <input  name = "pigNumber"  type="text" placeholder="请输入耳号" />
+      </view>
+    </view>
+
+    <view class="box1">
+      <view  class="text1">
+        <text>*时间：</text>
+      </view>
+      <view  class="input1">
+        <input  name = "comeTime"  type="text" value="{{time}}" />
+      </view>
+    </view>
+
+    <view class="box1">
+      <view  class="text1">
+        <text>*操作员：</text>
+      </view>
+      <view  class="input1">
+        <input name = "user"  type="text" value="{{user}}" />
+      </view>
+    </view>
+
+
+
+    <view class="box3">
+      <view  class="text1">
+        <text>*日志：</text>
+      </view>
+      <view  class="input3">
+         <textarea name="explain"  value=""/>
+      </view>
+      <button form-type="submit" type="primary" >添加</button>
+    </view>
+
+
+
+  </form >
+
+  </view>
+
+
+
+  

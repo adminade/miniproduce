@@ -96,7 +96,7 @@ goto_infoUpkeep(){
 
 goto_dairy(){
   wx.navigateTo({
-    url: '/pages/dairy/dairy',
+    url: '/todayDairy/pages/dairy/dairy',
   })
 },
 

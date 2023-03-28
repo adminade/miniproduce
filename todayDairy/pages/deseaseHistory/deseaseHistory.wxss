@@ -1,0 +1,55 @@
+/* pages/deseaseHistory/deseaseHistory.wxss */
+/* pages/transferHistory/transferHistory.wxss */
+.contain{
+  margin: 0 0 ;
+  padding:  0 0 ;
+  height: 100%;
+  background-color:#f4f4f4;
+
+}
+.head{
+  /* border: 1px solid #000000; */
+  display: flex
+}
+.search{
+
+  height: 64rpx;
+  width: 580rpx;
+  border:1px solid #bebeaf;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 15rpx;
+  margin-left: 20rpx;
+}
+ .search image{
+   height: 58rpx;
+  width: 58rpx;
+  }
+.search input {
+  font-size: 12px;
+  color: #bebeaf;
+  margin-left: 10rpx;
+}
+.box{
+  margin-top: 30rpx;
+  border: 1px solid #bebeaf;
+  /* height: 180rpx ; */
+  border-radius: 20rpx;
+  background-color: #ffffff;
+  flex-wrap: wrap;
+}
+
+.box view{
+  display: flex;
+  align-items: center;
+  /* height: 74rpx; */
+}
+/* body */
+.view_top{
+  border-bottom: 1px solid #efefef;
+}
+.door{
+padding: 0 20rpx;
+}

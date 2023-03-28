@@ -1,0 +1,76 @@
+<!--pages/addpig/addpig.wxml-->
+<form class="contain"  bindsubmit="submit" >
+    <view class="box1">
+      <view  class="text1">
+        <text>*批号：</text>
+      </view>
+      <view  class="input1">
+        <input name = "title"  type="text" placeholder="请输入批号" />
+      </view>
+    </view>
+
+    <view class="box1">
+      <view  class="text1">
+        <text>*头数：</text>
+      </view>
+      <view  class="input1">
+        <input type="text"  name = "pigSum"  placeholder="请输入头数" />
+      </view>
+    </view>
+        
+  
+    <view class="box1">
+      <view  class="text1">
+        <text>*总重量：</text>
+      </view>
+      <view  class="input1">
+        <input  name = "totalWeight"  type="text" placeholder="请输入重量(单位:kg)" />
+      </view>
+    </view>
+    <view class="box1">
+      <view  class="text1">
+        <text>*价格：</text>
+      </view>
+      <view  class="input1">
+        <input  name = "price"  type="text" placeholder="请输入价格(单位:kg)" />
+      </view>
+    </view>
+
+    <view class="box1">
+      <view  class="text1">
+        <text>*录入时间：</text>
+      </view>
+      <view  class="input1">
+        <input  name = "time"  type="text" value="{{time}}" />
+      </view>
+    </view>
+
+
+    <view class="box1">
+      <view  class="text1">
+        <text>*供应商：</text>
+      </view>
+      <view  class="input1">
+        <input  name = "fromer"  type="text" placeholder="请输入供应商" />
+      </view>
+    </view>
+
+    <view class="box1">
+      <view  class="text1">
+        <text>*操作员：</text>
+      </view>
+      <view  class="input1">
+        <input name = "user"  type="text" value="{{user}}" />
+      </view>
+    </view>
+
+    <view class="box3">
+      <view  class="text1">
+        <text>*备注：</text>
+      </view>
+      <view  class="input3">
+         <textarea name="bz"  value=""/>
+      </view>
+    </view>
+    <button form-type="submit" type="primary" >添加</button>
+</form >

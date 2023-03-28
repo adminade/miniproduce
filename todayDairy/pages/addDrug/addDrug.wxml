@@ -1,0 +1,69 @@
+<!--pages/addpig/addpig.wxml-->
+<form class="contain"  bindsubmit="submit" >
+  <picker    bindchange="bindPickerChange" value="{{pigindex}}" range="{{range}}">
+        <!-- 若是对象数组需要指定range-key 指定键的属性名 -->
+          <view class="box2">
+            <view class="text1">
+              <text >*耳号：</text>
+            </view>            
+            <view class="input2">
+              <text >{{pigNumberList[pigindex].pigNumber}}</text>
+            </view>
+            <view>
+              <image src="../../static/icons/xiasanjiao.png" mode=""/>
+            </view>
+          </view>
+        </picker>
+
+        <picker    bindchange="bindOutPickerChange" value="{{drugindex}}" range="{{RangedrugCate}}">
+        <!-- 若是对象数组需要指定range-key 指定键的属性名 -->
+          <view class="box2">
+            <view class="text1">
+              <text >*疫苗类型：</text>
+            </view>            
+            <view class="input2">
+              <text >{{drugcate[drugindex].drugs}}</text>
+            </view>
+            <view>
+              <image src="../../static/icons/xiasanjiao.png" mode=""/>
+            </view>
+          </view>
+        </picker>
+
+    <view class="box1">
+      <view  class="text1">
+        <text>*录入时间：</text>
+      </view>
+      <view  class="input1">
+        <input  name = "time"  type="text" value="{{time}}" />
+      </view>
+    </view>
+
+
+    <view class="box1">
+      <view  class="text1">
+        <text>*操作员：</text>
+      </view>
+      <view  class="input1">
+        <input name = "user"  type="text" value="{{user}}" />
+      </view>
+    </view>
+    <!-- <view class="box1">
+      <view  class="text1">
+        <text>*详情：</text>
+      </view>
+      <view  class="input1">
+        <input name = "detail"  type="text" placeholder="请输入" />
+      </view>
+    </view> -->
+
+    <view class="box3">
+      <view  class="text1">
+        <text>*备注：</text>
+      </view>
+      <view  class="input3">
+         <textarea name="explain"  value=""/>
+      </view>
+    </view>
+    <button form-type="submit" type="primary" >添加</button>
+</form >

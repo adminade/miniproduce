@@ -1,0 +1,47 @@
+<!--pages/dairy/dairy.wxml-->
+<view class="contain">
+  <view  class="menu1">
+    <view class="box1" bindtap="goto_deseaseHistory">
+      <image src="../../static/icons/hospital.png"   mode=""/>
+      <text>病情记录</text>
+    </view>
+    <view class="box1" bindtap="goto_dieOutHistory">
+      <image src="../../static/icons/filter.png"    mode=""/>
+      <text>死淘数据</text>
+    </view>   
+    <view class="box1" bindtap="goto_drugHistory">
+      <image src="../../static/icons/drug.png" mode=""/>
+      <text>疫苗记录</text>
+    </view>
+  </view>
+  <view  class="menu2">
+    <view class="box1">
+      <image src="../../static/icons/pig.png" bindtap="goto_addpig"  mode=""/>
+      <text>添加猪只</text>
+    </view>
+    <view class="box1">
+      <image src="../../static/icons/transfer.png" bindtap="goto_transferHouse" mode=""/>
+      <text>转舍记录</text>
+    </view>   
+    <view class="box1" bindtap="goto_operateHistory">
+      <image src="../../static/icons/operate.png" mode=""/>
+      <text>操作日志</text>
+    </view>
+  </view>
+  <view  class="menu3">
+    <view class="box1" bindtap="goto_buyHistory">
+      <image src="../../static/icons/buy.png"   mode=""/>
+      <text>购买数据</text>
+    </view>
+    <view class="box1"  id="last"  bindtap="goto_soldHistory">
+      <image src="../../static/icons/sold.png" mode=""/>
+      <text>销售数据</text>
+    </view>   
+    <!-- <view class="box1">
+      <image src="../../static/icons/helpother.png" mode=""/>
+      <text>寄养数据</text>
+    </view> -->
+  </view>
+
+
+</view>

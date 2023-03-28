@@ -1,16 +1,5 @@
 {
-  "appid": "wx485f44817ba38593",
   "compileType": "miniprogram",
-  "libVersion": "2.30.2",
-  "packOptions": {
-    "ignore": [
-      {
-        "value": "/minitest",
-        "type": "folder"
-      }
-    ],
-    "include": []
-  },
   "setting": {
     "coverView": true,
     "es6": true,
@@ -23,12 +12,24 @@
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
-    }
+    },
+    "ignoreUploadUnusedFiles": true
   },
   "condition": {},
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
   },
-  "testRoot": "minitest/"
+  "testRoot": "minitest/",
+  "libVersion": "2.30.2",
+  "packOptions": {
+    "ignore": [
+      {
+        "value": "/minitest",
+        "type": "folder"
+      }
+    ],
+    "include": []
+  },
+  "appid": "wx485f44817ba38593"
 }

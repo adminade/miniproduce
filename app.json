@@ -9,20 +9,44 @@
        "pages/aticleDetail/aticleDetail",
        "pages/search/search",
        "pages/infoUpkeep/infoUpkeep",
-       "pages/infoUpkeepQuery/infoUpkeepQuery",
-       "pages/dairy/dairy",
-       "pages/addpig/addpig",
-       "pages/transferHouse/transferHouse",
-       "pages/transferHistory/transferHistory",
-       "pages/addHouse/addHouse",
-       "pages/addTransfer/addTransfer",
-       "pages/operateHistory/operateHistory",
-       "pages/addOperateDairy/addOperateDairy",
-       "pages/deseaseHistory/deseaseHistory",
-       "pages/addDeseaseDairy/addDeseaseDairy"
+       "pages/infoUpkeepQuery/infoUpkeepQuery"
+
+
+
+    ],"subPackages": [
+      {
+        "root":"todayDairy",
+        "name":"todayDairy",
+        "pages": [
+            "pages/dairy/dairy",
+            "pages/addpig/addpig",
+            "pages/transferHouse/transferHouse",
+            "pages/transferHistory/transferHistory",
+            "pages/addHouse/addHouse",
+            "pages/addTransfer/addTransfer",
+            "pages/operateHistory/operateHistory",
+            "pages/addOperateDairy/addOperateDairy",
+            "pages/deseaseHistory/deseaseHistory",
+            "pages/addDeseaseDairy/addDeseaseDairy",
+            "pages/dieOutHistory/dieOutHistory",
+            "pages/addDieOut/addDieOut",
+            "pages/drugHistory/pages.drugHistory",
+            "pages/addDrug/addDrug",
+            "pages/buyHistory/buyHistory",
+            "pages/addBuy/addBuy",
+            "pages/soldHistory/soldHistory",
+            "pages/addSold/addSold"
+        ]
+      }
 
 
     ],
+    "preloadRule": {
+      "pages/home/home":{
+        "packages": ["todayDairy"],
+        "network": "all"
+      }
+    },
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
