@@ -1,0 +1,70 @@
+<view class="contain">
+      <view  class="head">
+      <view class="search"  >
+        <view>
+          <image src="../../static/icons/search.png" mode=""/>
+        </view>
+        <view>
+        <input type="text" placeholder="请输入搜索设备号" bindinput="input" auto-focus/>  
+        </view>
+
+      </view>
+      <button type="primary" size="mini" bindtap="pulldown"> 筛选 </button>
+      <button type="primary" class="button2" size="mini"  bindtap="goto_addDevice"  >添加</button>
+    </view>
+    <view class="body">
+        
+              <view wx:if="{{filter}}" class="filter">
+                    <view class="button6"  bindtap="pullup" data-type="all">
+                      <text>全选</text>
+                    </view>
+                    <view class="button1"  bindtap="pullup" data-type="eat">
+                      <text>采食</text>
+                    </view>
+                    <view class="button2" bindtap="pullup" data-type="drink" >
+                      <text>饮水</text>
+                    </view>
+                    <view class="button3" bindtap="pullup"  data-type="run">
+                      <text>运动</text>
+                    </view>
+                    <view class="button4" bindtap="pullup"  data-type="tempu">
+                      <text>体温</text>
+                    </view>
+                    <view class="button5"  bindtap="pullup" data-type="intimeWeight">
+                      <text>体重</text>
+                    </view>
+
+              </view>
+              <view  wx:if="{{tag == 0}}">
+                <view  class="box1"  wx:for="{{deviceList}}" wx:key="index" wx:if="{{filterShow[item.deviceCate]}}">
+                  <view class="con"   data-filter="{{item.deviceCate}}"  >
+                    <view   class="box" >
+                    <text>设备新型：{{deviceName[item.deviceCate]}}  || 设备号：{{ item.deviceId}}</text>
+                    <button type="warn" size="mini" bindtap="deleteHouse"  data-index="{{index}}" >不在线</button>
+                    </view>
+                    <view  >
+                      <text>栏舍:{{item.pigHouse}}</text>
+                    </view>
+                  </view>
+                  
+                 </view> 
+              </view>
+              <view wx:if="{{tag ==1 }}">
+                <view wx:for="{{histroyListSearch}}" wx:key="index">
+                    <view class="box1">
+                      <view  class="box">
+                    <text>设备类型：{{deviceName[item.deviceCate]}}  || 设备号：{{item.deviceId}}</text>
+                    <button type="warn" size="mini" bindtap="deleteHouse"   >不在线</button>
+                 </view>
+                   <view>
+                      <text>栏舍：{{item.pigHouse}}</text>
+                    </view>
+                    </view>
+                </view>
+              </view>
+
+
+    </view>
+
+
+</view>

@@ -19,9 +19,9 @@
      <image src="../../static/image/信息维护.png" mode=""/>
      <text>信息维护</text>
    </view>
-   <view class="menu2">
+   <view class="menu2"  bindtap="goto_deviceManage">
      <image src="../../static/image/设备报修.png" mode=""/>
-     <text>设备报修</text>
+     <text>设备管理</text>
    </view>
   <view class="menu3" bindtap = "goto_dairy"  >
      <image src="../../static/image/今日记录.png" mode=""/>

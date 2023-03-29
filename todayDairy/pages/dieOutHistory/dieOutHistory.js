@@ -57,10 +57,11 @@ Page({
           this.setData({
             histroyListSearch:[...this.data.histroyListSearch,data[i]]
           })
+          return
         }
      }
      console.log(this.data.histroyListSearch)
-     if(this.data.histroyListSearch == ''){
+     if(i == data.length){
        wx.showToast({
          title: '没找到该耳号记录',
          icon:'error',
@@ -68,7 +69,8 @@ Page({
        })
        setTimeout(() => {
         this.setData({
-          tag: 0
+          tag: 0,
+          histroyListSearch:[]
         })
       }, 1200) // 延迟 500ms 执行 setData() 方法
      }

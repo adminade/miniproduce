@@ -9,7 +9,9 @@
        "pages/aticleDetail/aticleDetail",
        "pages/search/search",
        "pages/infoUpkeep/infoUpkeep",
-       "pages/infoUpkeepQuery/infoUpkeepQuery"
+       "pages/infoUpkeepQuery/infoUpkeepQuery",
+       "pages/deviceManage/deviceManage",
+        "pages/addDevice/addDevice"
 
 
 

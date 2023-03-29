@@ -58,7 +58,7 @@
 .buttom{
   margin-top: 80rpx;
   border-radius: 20rpx;
-  border: 1px solid greenyellow;
+  /* border: 1px solid greenyellow; */
   display: flex;
 justify-content: space-around;
 flex-wrap:wrap;

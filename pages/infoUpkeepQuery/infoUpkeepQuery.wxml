@@ -6,38 +6,40 @@
   <button type="primary" size="mini" bindtap="query"  >查询</button>
 
 </view>
-<view wx:if="{{pigHouse}}" >
-  <text>圈舍：</text>
+<view class="box">
+  <view wx:if="{{pigHouse}}" >
+  <text>*圈舍：</text>
   <text class="cate"  >{{pigHouse}}  </text>  
 </view>
 <view  wx:if="{{cate}}">
-  <text>品种：</text>
+  <text>*品种：</text>
   <text class="cate"  >{{cate}}  </text>
 </view>
 <view wx:if="{{com_time}}">
-  <text> 入栏时间：</text>
+  <text>*入栏时间：</text>
   <text class="cate"   >{{com_time}} </text>
 </view>
 <view  wx:if="{{com_weight}}">
-  <text>入栏体重：</text>
+  <text>*入栏体重：</text>
   <text class="cate"  >{{com_weight}}kg  </text>
 </view>
 <view  wx:if="{{now_weight}}">
-  <text>现在体重</text>
+  <text>*现在体重</text>
 <text class="cate"   >{{now_weight}}kg  </text>  
 </view>
 <view  wx:if="{{inject_record}}">
-  <text>疫苗接种记录：</text>
+  <text>*疫苗接种记录：</text>
   <text class="cate"   >{{inject_record}}  </text>
 </view>
 <view  wx:if="{{desease_history}}">
-  <text>疾病史：</text>
+  <text>*疾病史：</text>
 <text class="cate"   >{{desease_history}}  </text>
 </view>
 <view wx:if="{{desease_record_time}}">
-  <text>疾病记录时间：</text>
+  <text>*疾病记录时间：</text>
 <text class="cate"   >{{desease_record_time}}  </text>
 </view>
 
+</view>
 </view>
 

@@ -81,6 +81,12 @@ longPress(location){
  
 
 },
+//页面跳转路由
+goto_deviceManage(){
+  wx.navigateTo({
+    url: '/pages/deviceManage/deviceManage',
+  })
+},
 
 goto_desase_resoure(){
   wx.navigateTo({

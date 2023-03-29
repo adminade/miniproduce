@@ -13,3 +13,10 @@
   padding: 0 0 ;
   width: 160rpx;
 }
+.box view{
+  margin-top: 20rpx;
+  border:1px  solid #efefee;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+}
