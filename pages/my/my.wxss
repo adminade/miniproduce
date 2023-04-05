@@ -1,1 +1,27 @@
-/* pages/my/my.wxss */
+.contain{
+  margin-top: 100rpx;
+}
+.nav{
+  margin-top: 60rpx;
+  height: 110rpx;
+  width: 99%;
+  border:1px solid #BBBBBB ;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+} 
+
+.imageContainer{
+margin-left: auto;
+}
+.nav image{
+  /* display: flex; */
+  width: 78rpx;
+  height: 78rpx;
+}
+.text{
+  margin-left:150rpx ;
+  
+}

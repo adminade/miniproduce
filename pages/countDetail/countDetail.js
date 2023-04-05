@@ -1,4 +1,4 @@
-// pages/my/my.js
+// pages/countDetail/countDetail.js
 Page({
 
   /**
@@ -6,17 +6,6 @@ Page({
    */
   data: {
 
-  },
-
-  goto_fix(){
-    wx.navigateTo({
-      url: '/pages/fix/fix',
-    })
-  },
-  goto_countDetail(){
-    wx.navigateTo({
-      url: '/pages/countDetail/countDetail',
-    })
   },
 
   /**

@@ -11,7 +11,11 @@
        "pages/infoUpkeep/infoUpkeep",
        "pages/infoUpkeepQuery/infoUpkeepQuery",
        "pages/deviceManage/deviceManage",
-        "pages/addDevice/addDevice"
+        "pages/addDevice/addDevice",
+        "pages/envMoniter/envMoniter",
+        "pages/phyExam/phyExam",
+        "pages/fix/fix",
+        "pages/countDetail/countDetail"
 
 
 

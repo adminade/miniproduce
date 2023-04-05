@@ -72,14 +72,7 @@ Page({
         });
         
         const totalCount = res.data.message.length;
-        
-        // console.log("houseCateCount:");
-        // console.log(houseCateCount.map(([HouseCate, count]) => `${HouseCate}: ${count}`).join("\n"));
-        
-        // console.log("\ncateCount:");
-        console.log(cateCount);
-        // console.log(houseCateCount)
-        // console.log(totalCount);
+        console.log(houseCateCount)
         const results = houseCateCount;
         // 使用 reduce() 方法将查询结果拆分成一个二维数组
         const data = results.reduce((acc, cur) => {
@@ -105,7 +98,8 @@ Page({
         
         })
         app.globalData.homeList=data
-
+        //先进行这个页面的展示，监控页面才有信息
+        app.globalData.cateCount=cateCount
 
       }
      

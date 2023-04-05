@@ -1,4 +1,30 @@
 <!--pages/monitor/monitor.wxml-->
-<view class="container">
+<!-- <view class="container">
   <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+</view> -->
+
+<!-- <ec-canvas id="mychart-dom-multi-bar" canvas-id="mychart-multi-bar" ec="{{ ecBar }}"></ec-canvas> -->
+
+<!--index.wxml-->
+<!-- <scroll-view scroll-y="true" style="height: 100%; width: 100%;" bindscroll="scrollHandler"> -->
+<view class="contain">
+  <!-- <ec-canvas id="mychart-dom-multi-bar" canvas-id="mychart-multi-bar" ec="{{ ecBar }}"></ec-canvas> -->
+<view class="pie">  
+  <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ecPie }}"  force-use-old-canvas='true' ></ec-canvas>
+</view>
+<view class="gauge">
+  <ec-canvas id="mychart-dom-gauge" canvas-id="mychart-gauge" ec="{{ ecgauge }}" force-use-old-canvas='true'  ></ec-canvas>
+</view>
+  <view class="tip">
+    <view class="top">
+      <text>潜在风险</text>
+    </view>
+      <view class="buttom">
+        ....
+      </view>
+  </view>
+
+</view>
+
+<view class="hi">
 </view>

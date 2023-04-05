@@ -1,2 +1,51 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class="contain">
+  <view class="nav" >
+      <view>
+        <image src="../../static/icons/gongneng.png" mode=""/>
+      </view>
+      <view class="text">
+        <text>功能介绍</text>
+      </view>
+      <view class="imageContainer">
+        <image src="../../static/icons/list.png" mode=""/>
+      </view>
+    </view>
+
+    <view class="nav"  bindtap="goto_fix">
+      <view>
+        <image src="../../static/icons/fix.png" mode=""/>
+      </view>
+      <view class="text">
+        <text>设备报修</text>
+      </view>
+      <view class="imageContainer">
+        <image src="../../static/icons/list.png" mode=""/>
+      </view>
+    </view>
+
+    <view class="nav"  bindtap="goto_countDetail">
+      <view>
+        <image src="../../static/icons/account.png" mode=""/>
+      </view>
+      <view class="text">
+        <text>账户信息</text>
+      </view>
+      <view class="imageContainer">
+        <image src="../../static/icons/list.png" mode=""/>
+      </view>
+    </view>
+
+    <view class="nav" >
+      <view>
+        <image src="../../static/icons/feedback.png" mode=""/>
+      </view>
+      <view class="text">
+        <text>帮助反馈</text>
+      </view>
+      <view class="imageContainer">
+        <image src="../../static/icons/list.png" mode=""/>
+      </view>
+    </view>
+
+
+</view>

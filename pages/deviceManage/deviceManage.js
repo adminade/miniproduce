@@ -76,9 +76,6 @@ Page({
      }
    },
 
-
-
-
   // 点击按钮放下过滤框
   pulldown(){
     this.setData({

@@ -1,0 +1,60 @@
+<view class="contain">
+  <picker    bindchange="bindPickerChange" value="{{houseindex}}" range="{{houseName}}">
+        <!-- 若是对象数组需要指定range-key 指定键的属性名 -->
+          <view class="box1">
+            <view class="text1">
+              <text >*栏舍：</text>
+            </view>            
+            <view class="input1">
+              <text >{{houseName[houseindex]}}</text>
+            </view>
+            <view>
+              <image src="../../static/icons/xiasanjiao.png" mode=""/>
+            </view>
+          </view>
+  </picker>
+  <view  class="box2">
+    <view class="top"   wx:for="{{homePig}}" wx:for-index="homeid" wx:key="index"   wx:if="{{ homePig[homeid][0] == houseName[houseindex]  }}"  >
+        <view class="lanshu">
+          <text>栏数</text>
+          <text>{{homePig[homeid][1]}}</text>
+        </view>
+        <view class="lanshu">
+          <text>猪总数</text>
+          <text>{{homePig[homeid][2]}}</text>
+        </view>
+    </view>
+    <view class="buttom">
+      <view class="lanshu">
+          <text>温度</text>
+          <text>{{tempu}}</text>
+        </view>
+        <view class="lanshu">
+          <text>湿度</text>
+          <text>{{weat}}</text>
+        </view>
+        <view class="lanshu">
+          <text>氨气浓度</text>
+          <text>{{NH3}}</text>
+        </view>
+        <view class="lanshu">
+          <text>CO2浓度</text>
+          <text>{{CO2}}</text>
+        </view>
+    </view>
+  </view>
+  <view class="box3">
+    <view class="home" wx:for="{{homeList}}"  wx:key="index1" wx:for-index="cateId"> 
+      <view wx:for="{{item}}" wx:key="index2"  wx:if="{{ homeList[cateId][0] == houseName[houseindex]  }}"  wx:for-index='id'>
+              <view wx:if="{{id > 0}}"  class="video">
+                <text>{{item[0]}}</text>
+                <text>{{item[1]}}猪</text>
+                <view class="moniter">
+                  <text>视频监控</text>
+                </view>
+            </view>
+      </view>
+    </view>
+  </view>
+
+</view>

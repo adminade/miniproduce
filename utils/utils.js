@@ -15,7 +15,7 @@ export const myRequest = (options) =>{
       header:header,
       data:options.data || {},
 
-      success:(res) =>{
+      success: (res) =>{
         resolve(res)
         if(res.data.message =='身份认证失败'){
           wx.showToast({
@@ -29,7 +29,7 @@ export const myRequest = (options) =>{
           title: '请求接口失败',
         })
         reject(err)
-      }
+      },
     })
   })
 

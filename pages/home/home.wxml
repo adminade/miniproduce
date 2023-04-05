@@ -38,20 +38,20 @@
  <view class="myBrand">
  <text class="brand_text">我的养殖厂</text>
   <view class="menu_logo">
-    <view class="menu1">
+    <view class="menu1"  bindtap="goto_envMoniter">
      <image src="../../static/image/监控.png" mode=""/>
-     <text>监控</text>
+     <text>环境监控</text>
    </view>
  <view class="menu2">
      <image src="../../static/image/饲料营养.png" mode=""/>
-     <text>饲料营养</text>
+     <text>疾病诊断</text>
    </view>
-    <view class="menu3">
-     <image src="../../static/image/体检数据.png" mode=""/>
+    <view class="menu3" bindtap="goto_phyExam">
+     <image src="../../static/image/体检数据.png"   mode=""/>
      <text>体检数据 </text>
    </view>
-    <view class="menu4">
-     <image src="../../static/image/疾病资料.png" bindtap="goto_desase_resoure" mode=""/>
+    <view class="menu4"  bindtap="goto_desase_resoure">
+     <image src="../../static/image/疾病资料.png"  mode=""/>
      <text>疾病资料</text>
    </view>
   </view>
@@ -67,31 +67,52 @@
   -->
 </view> 
 
-
 <view class="alarmBox">
-  <text class="alarm_list">事件列表</text>
-     <view wx:for="{{tingsList}}" wx:key="index" class="alarm_for"> 
-    <view class="showAlarm_0" wx:if="{{item.tag == 0}}"   bindtouchstart="touchstart" data-index="{{index}}"  bindtouchend="touchend">
-      <text class="alarm_time">{{alarmTime}}</text>
-      <text class="alarm_text" >{{index}} : {{item.text}}</text>
+  <text class="alarm_list">事件列表</text>  <!-- //只展示监控信息 -->
+     <view wx:for="{{thingsList}}" wx:key="index" class="alarm_for"> 
+    <view class="showAlarm_1" wx:if="{{item.bz2 == 1}}"   bindtouchstart="touchstart" data-index="{{index}}"  bindtouchend="touchend">
+      <text class="alarm_time">{{item.time}}</text>
+      <text class="alarm_text">{{item.pigNumber}}号猪: {{item.detail}},持续时间:{{item.durationTime}}小时</text>
+
+      <text class="alarm_text" >{{item.pigHouse}}</text>
+
       <view class="alarm_icon0">
         <image src="../../static/image/alarm_0.png" mode=""/>
       </view>
     </view>
    
-    <view class="showAlarm_1" wx:else = "{{item.tag ==1}}" bindtouchstart="touchstart"  data-index="{{index}}"    bindtouchend="touchend">
-      <text class="alarm_time">{{alarmTime}}</text>
-      <text class="alarm_text">{{index}} : {{item.text}}</text>
+    <view class="showAlarm_2" wx:elif = "{{item.bz2 ==2}}" bindtouchstart="touchstart"  data-index="{{index}}"    bindtouchend="touchend">
+      <text class="alarm_time">{{item.time}}</text>
+      <text class="alarm_text">{{item.pigNumber}}号猪: {{item.detail}},持续时间:{{item.durationTime}}小时</text>
       <view class="alarm_icon1">
         <image src="../../static/image/alarm_1.png" mode=""/>
       </view>
     
     </view>
 
+    <view class="showAlarm_3" wx:elif = "{{item.bz2 ==3}}" bindtouchstart="touchstart"  data-index="{{index}}"    bindtouchend="touchend">
+      <text class="alarm_time">{{item.time}}</text>
+      <text class="alarm_text">{{item.pigNumber}}号猪: {{item.detail}},持续时间:{{item.durationTime}}小时</text>
+      <view class="alarm_icon1">
+        <image src="../../static/image/alarm_1.png" mode=""/>
+      </view>
+    
+    </view>
+
+    <view class="showAlarm_4" wx:elif = "{{item.bz2 ==4}}" bindtouchstart="touchstart"  data-index="{{index}}"    bindtouchend="touchend">
+      <text class="alarm_time">{{item.time}}</text>
+      <text class="alarm_text">{{item.pigNumber}}号猪: {{item.detail}},持续时间:{{item.durationTime}}小时</text>
+      <view class="alarm_icon1">
+        <image src="../../static/image/alarm_1.png" mode=""/>
+      </view>
+    
+    </view>
+
+
 </view>
 </view>
 
-<button  bindtap="addone">添加事件</button>
+<!-- <button  bindtap="addone">添加事件</button> -->
 
 
 

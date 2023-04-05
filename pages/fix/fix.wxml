@@ -1,0 +1,68 @@
+<!--pages/addpig/addpig.wxml-->
+
+<view  class="contain">
+    <form   bindsubmit="submit" >
+      <view class="box1">
+      <view  class="text1">
+        <text>*故障编号：</text>
+      </view>
+      <view  class="input1">
+        <input  name = "number"  type="text"  />
+      </view>
+    </view>
+   
+    <view class="box1">
+      <view  class="text1">
+        <text>*故障时间：</text>
+      </view>
+      <view  class="input1">
+        <input  name = "time"  type="text" value="{{time}}" />
+      </view>
+    </view>
+
+    <view class="box1">
+      <view  class="text1">
+        <text>*地址：</text>
+      </view>
+      <view  class="input1">
+        <input  name = "brand"  type="text" value="{{address}}" />
+      </view>
+    </view>
+
+    <view class="box1">
+      <view  class="text1">
+        <text>*记录员：</text>
+      </view>
+      <view  class="input1">
+        <input name = "userName"  type="text" value="{{user}}" />
+      </view>
+    </view>
+    <view class="box1">
+      <view  class="text1">
+        <text>*电话：</text>
+      </view>
+      <view  class="input1">
+        <input name = "phone"  type="text" value="{{phone}}" />
+      </view>
+    </view>
+
+
+    <view class="box3">
+      <view  class="text1">
+        <text>*故障详情：</text>
+      </view>
+      <view  class="input3">
+         <textarea name="detail"  value=""/>
+      </view>
+      <button form-type="submit" type="primary" >上传</button>
+    </view>
+
+
+
+  </form >
+
+  </view>
+
+
+
+  

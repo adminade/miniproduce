@@ -1,23 +1,64 @@
-/* pages/monitor/monitor.wxss */
-.container {
-  /* position: absolute;
-  /* position: relative; */
-  /* top: 1200rpx;
-  bottom: 0;
-  left: 0;
-  right: 0;  */
-  margin: 0;
-  padding: 0;
-  /* 这个图表是渲染出来的，不知道高度多少，所以不好直接设置height，怎么办呢 设置定位！ */
-  height: 350px;
+
+.contain{
   width: 100%;
+  height: 100%;
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-} 
+  background-color: pink;
+}
 ec-canvas {
   width: 100%;
   height: 100%;
+}
+.pie{
+  height: 500rpx;
+  width: 100%;
+  background-color: skyblue;
+  position: absolute;
+}
+
+
+.gauge{
+  height: 500rpx;
+  width: 100%;
+  background-color: goldenrod;
+  position: absolute;
+  top: 500rpx;
+}
+.tip{
+  background-color: #aaaaaa;
+  width: 440rpx;
+  height: 400rpx;
+  position: absolute;
+  top: 600rpx;
+  left: 300rpx;
+  z-index: 1;
+  border-left: 10rpx solid green;
+  
+}
+.top{
+  margin-left: 20rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: #ffffff solid 4rpx;
+}
+.top text{
+  color: #ffffff;
+}
+.buttom{
+  height: 300rpx;
+  background-color: greenyellow;
+}
+.hi {
+  position: relative;
+  top: 1000rpx;
+  height: 800rpx;
+  /* height: 200rpx; */
+  background-color: pink;
+  z-index: 1;
 }
