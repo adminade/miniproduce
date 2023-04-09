@@ -27,7 +27,7 @@
      <image src="../../static/image/今日记录.png" mode=""/>
      <text>今日记录</text>
    </view>
-    <view class="menu4">
+    <view class="menu4"  bindtap="goto_lookevent">
      <image src="../../static/image/查看事件.png" mode=""/>
      <text>查看事件</text>
    </view>
@@ -42,7 +42,7 @@
      <image src="../../static/image/监控.png" mode=""/>
      <text>环境监控</text>
    </view>
- <view class="menu2">
+ <view class="menu2"  bindtap="goto_deseasePredict">
      <image src="../../static/image/饲料营养.png" mode=""/>
      <text>疾病诊断</text>
    </view>
@@ -74,7 +74,7 @@
       <text class="alarm_time">{{item.time}}</text>
       <text class="alarm_text">{{item.pigNumber}}号猪: {{item.detail}},持续时间:{{item.durationTime}}小时</text>
 
-      <text class="alarm_text" >{{item.pigHouse}}</text>
+      <!-- <text class="alarm_text" >{{item.pigHouse}}</text> -->
 
       <view class="alarm_icon0">
         <image src="../../static/image/alarm_0.png" mode=""/>

@@ -18,7 +18,21 @@ Page({
       url: '/pages/countDetail/countDetail',
     })
   },
-
+  goto_feedback(){
+    wx.navigateTo({
+      url: '/pages/feedback/feedback',
+    })
+  },
+  goto_login(){
+    wx.reLaunch({
+      url: '/pages/login/login',
+    })
+  },
+  goto_recommend(){
+    wx.navigateTo({
+      url: '/pages/recomend/recomend',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

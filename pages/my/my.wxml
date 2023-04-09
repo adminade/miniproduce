@@ -1,9 +1,9 @@
 <view class="contain">
-  <view class="nav" >
+  <view class="nav"  bindtap="goto_recommend">
       <view>
         <image src="../../static/icons/gongneng.png" mode=""/>
       </view>
-      <view class="text">
+      <view class="text"   >
         <text>功能介绍</text>
       </view>
       <view class="imageContainer">
@@ -35,7 +35,7 @@
       </view>
     </view>
 
-    <view class="nav" >
+    <view class="nav"  bindtap="goto_feedback" >
       <view>
         <image src="../../static/icons/feedback.png" mode=""/>
       </view>
@@ -47,5 +47,9 @@
       </view>
     </view>
 
+<view  class="jump">
+  
+  <button type="primary" bindtap="goto_login"> 退出登录</button>
 
+</view>
 </view>

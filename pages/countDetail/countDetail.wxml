@@ -1,2 +1,71 @@
 <!--pages/countDetail/countDetail.wxml-->
-<text>pages/countDetail/countDetail.wxml</text>
+<view class="contain">
+    <view class="head">
+      <view class="picture">
+          <!-- <image src="../../static/image/use_head.png" mode=""/> -->
+      </view>
+      <view class="text1">
+        <text>您好，欢迎您使用本小程序</text>
+      </view>
+    </view>
+
+<form bindsubmit="submit">
+  <van-cell-group>
+  <van-field
+    value="{{ brand }}"
+    label="养殖场"
+    disabled
+    error
+  />
+  <van-field
+    value="{{ countName }}"
+    label="用户名"
+    placeholder="请输入用户名"
+    error
+    border="{{ false }}"
+  />
+  <van-field
+    value="{{ phone }}"
+    label="修改手机号"
+    placeholder="请输入手机号"
+    border="{{ false }}"
+    name ="phone"
+  />
+  <van-field
+    value="{{ password }}"
+    label="修改密码"
+    placeholder="请输入密码"
+    border="{{ false }}"
+    name="password"
+  />
+  <van-field
+    value="{{ sms }}"
+    center
+    clearable
+    label="短信验证码"
+    placeholder="请输入短信验证码"
+    border="{{ false }}"
+    use-button-slot
+    name="smscode"
+  >
+    <van-button slot="button" size="small" type="primary" bindtap="sendsms">
+      发送验证码
+    </van-button>
+  </van-field>
+
+</van-cell-group>
+<button   type="primary"  form-type="submit">提交</button>
+
+
+
+
+
+
+
+</form>
+
+  
+
+
+</view>
+

@@ -1,0 +1,8 @@
+/* pages/lookevent/lookevent.wxss */
+.my-cell{
+  font-size: 12px;
+  color: red;
+}
+.event{
+  margin-top: 20rpx;
+}

@@ -1,0 +1,54 @@
+/* 提醒每次引入组件后，都养构建npm否则没样式 */
+
+.box1{
+  margin-left: 20rpx;
+  width: 192rpx;
+  height: 70rpx;
+}
+.box1 text{
+  line-height: 70rpx;
+  font-size: 24px;
+  color: #1a5bd3;
+}
+
+
+.box2 {
+  display: flex;
+  height: 104rpx;
+  align-items: center;
+}
+.input2{
+  width: 480rpx;
+  margin-left: auto;
+  border-bottom: 1px solid #efefee;
+}
+
+.body{
+  display: flex;
+}
+.select{
+  margin-top: 20rpx;
+}
+.text1{
+  margin-left: 20rpx;
+}
+.smalltext{
+  font-size: 12px;
+  align-self: flex-end;
+}
+.box2 image{
+  width: 80rpx;
+  height:104rpx ;
+}
+.symbole{
+  margin-top: 20rpx;
+}
+.button{
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: center;
+}
+.resullt{
+  height: 200rpx;
+  border: 1px solid #efefee;
+}

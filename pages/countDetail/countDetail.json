@@ -1,4 +1,8 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "账户信息"
+  "usingComponents": {
+    "van-field": "@vant/weapp/field/index"
+  },
+"navigationBarTitleText": "账户信息",
+"navigationBarBackgroundColor": "#93d2f3"
+
 }

@@ -1,1 +1,24 @@
 /* pages/countDetail/countDetail.wxss */
+.head{
+  height: 200rpx;
+  width: 100%;
+  background-color: #93d2f3;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+.picture{
+  width: 100rpx;
+  height: 100rpx;
+  background-color: green;
+  background-image: url("https://www.likeastar.top/image/use_head.png");
+  background-size: cover;
+  border-radius: 50%;
+}
+.picture image {
+  height: 150rpx;
+  width: 150rpx;
+}
+.text1 {
+  margin-left: 20rpx;
+}

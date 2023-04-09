@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  background-color: pink;
+  /* background-color: pink; */
 }
 ec-canvas {
   width: 100%;
@@ -17,7 +17,7 @@ ec-canvas {
 .pie{
   height: 500rpx;
   width: 100%;
-  background-color: skyblue;
+  /* background-color: skyblue; */
   position: absolute;
 }
 
@@ -25,7 +25,7 @@ ec-canvas {
 .gauge{
   height: 500rpx;
   width: 100%;
-  background-color: goldenrod;
+  /* background-color: goldenrod; */
   position: absolute;
   top: 500rpx;
 }
@@ -52,13 +52,16 @@ ec-canvas {
 }
 .buttom{
   height: 300rpx;
-  background-color: greenyellow;
+  background-color: #efefef;
 }
 .hi {
   position: relative;
   top: 1000rpx;
   height: 800rpx;
   /* height: 200rpx; */
-  background-color: pink;
+  /* background-color: pink; */
   z-index: 1;
+}
+.alarm_text{
+  font-size: 14px;
 }

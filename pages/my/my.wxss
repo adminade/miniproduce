@@ -25,3 +25,6 @@ margin-left: auto;
   margin-left:150rpx ;
   
 }
+.jump{
+  margin-top: 260rpx;
+}

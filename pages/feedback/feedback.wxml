@@ -1,0 +1,41 @@
+<!--pages/feedback/feedback.wxml-->
+<view>
+  
+<form bindsubmit="submit">
+  <van-cell-group>
+    <van-field
+    value="{{ time }}"
+    label="时间"
+    placeholder="请输入用户名"
+    input-align="right"
+    name ="time"
+  /> 
+   <van-field
+    value="{{ username }}"
+    label="用户"
+    placeholder="请输入用户名"
+    input-align="right"
+    name ="user"
+  />
+  <van-field
+    value="{{ phone }}"
+    label="手机"
+    placeholder="请输入电话号"
+    input-align="right"
+    name="phone"
+  />
+
+  <van-field
+    value="{{ message }}"
+    label="反馈"
+    type="textarea"
+    placeholder="请输入留言"
+    autosize
+    border="{{ false }}"
+    name="message"
+  />
+</van-cell-group>
+
+<button  type="primary"   form-type="submit">提交</button>
+</form>
+</view>

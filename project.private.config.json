@@ -120,6 +120,20 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/deseasePredict/deseasePredict",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/phyExam/phyExam",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

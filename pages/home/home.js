@@ -50,6 +50,7 @@ touchend(event){
 },
 
 longPress(location){
+  const that = this
   console.log(location)
   wx.showModal({
     title: '',
@@ -57,23 +58,11 @@ longPress(location){
     content: '确认删除该消息吗',
     success:(res)=>{
       if(res.confirm === true){
-        // var thingList =this.data.tingsList;
-        // thingList.splice(location,1)
-        /* thingsList 数组是被直接修改的，而没有使用 setData 方法来更新数据。在微信小程序中，如果需要更新数据，必须使用 setData 方法来触发页面重新渲染。*/
-       
         //使用展开运算符号，删除数组中下标为i的元素
-        this.setData({
-          tingsList:[...this.data.tingsList.slice(0,location),...this.data.tingsList.slice(location+1)]
+        that.setData({
+          thingsList:[...that.data.thingsList.slice(0,location),...that.data.thingsList.slice(location+1)]
         })
         console.log('be done')
-        // 判断紧急事件为0级时候，发送短信提醒用户  @!!!!!!!!!!!!!
-        // utils.myRequest({
-        //   url:'utils/localserver/requestSMS',
-        //   method:'GET',
-        //   data:{}
-        // }).then(res =>{
-        //   console.log(res.data)
-        // })
       }
      console.log(res.confirm) 
     }
@@ -119,6 +108,17 @@ goto_dairy(){
   })
 },
 
+goto_deseasePredict(){
+  wx.navigateTo({
+    url: '/pages/deseasePredict/deseasePredict',
+  })
+},
+goto_lookevent(){
+  wx.navigateTo({
+    url: '/pages/lookevent/lookevent',
+  })
+},
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -143,6 +143,8 @@ goto_dairy(){
 
 
   },
+
+
 
   //计算tag等级 +时间转换
   gettag(req){

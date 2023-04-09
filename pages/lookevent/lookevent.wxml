@@ -1,0 +1,8 @@
+<view  wx:for="{{alarmList}}" wx:key="index" class="event">
+  
+  <van-cell-group inset >
+  <van-cell title="{{item.time}}" custom-style="background-color: #476be3;"   />
+  <van-cell   label="{{item.pigHouse}}，监测到{{item.pigNumber}}号猪{{item.detail}},监测持续时间：{{item.durationTime}}小时." border="{{ false }}"  custom-style="background-color: #efefef;"  />
+</van-cell-group>
+
+</view>

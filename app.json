@@ -1,4 +1,5 @@
 {
+    
     "pages": [
       "pages/login/login",
       "pages/home/home",
@@ -15,7 +16,11 @@
         "pages/envMoniter/envMoniter",
         "pages/phyExam/phyExam",
         "pages/fix/fix",
-        "pages/countDetail/countDetail"
+        "pages/countDetail/countDetail",
+        "pages/deseasePredict/deseasePredict",
+        "pages/lookevent/lookevent",
+        "pages/feedback/feedback",
+        "pages/recomend/recomend"
 
 
 
@@ -80,7 +85,6 @@
     ],
     "selectedColor": "#d81e06"
     },
-    "lazyCodeLoading": "requiredComponents",
-    "style": "v2",
     "sitemapLocation": "sitemap.json"
+
 }

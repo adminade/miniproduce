@@ -6,13 +6,19 @@
     "postcss": true,
     "minified": true,
     "enhance": true,
-    "showShadowRootInWxmlPanel": true,
-    "packNpmRelationList": [],
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
     },
+    "showShadowRootInWxmlPanel": true,
+    "packNpmManually": true,
+    "packNpmRelationList": [
+      {
+        "packageJsonPath": "./package.json",
+        "miniprogramNpmDistDir": "./miniprogram_npm/"
+      }
+    ],
     "ignoreUploadUnusedFiles": true
   },
   "condition": {},

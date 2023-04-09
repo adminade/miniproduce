@@ -1,2 +1,41 @@
 <!--pages/phyExam/phyExam.wxml-->
-<text>pages/phyExam/phyExam.wxml</text>
+<view class="head">
+    <view class="box1"  bindtap="move" data-move="0">
+      <view class="move1"  style="{{border[0]}}" >
+        <text>体温</text>
+      </view>
+    </view>
+
+    <view class="box2"  bindtap="move" data-move="1"  >
+      <view class="move2"  style="{{border[1]}}">
+        <text>体重</text>
+      </view>
+    </view>
+    
+    <view class="box3" bindtap="move" data-move="2" >
+      <view class="move3"  style="{{border[2]}}">
+        <text>饮食量</text>
+      </view>
+    </view>
+    
+    <view class="box4" bindtap="move" data-move="3" >
+      <view class="move4"  style="{{border[3]}}">
+        <text>饮水量</text>
+      </view>
+    </view>
+    
+    <view class="box5" bindtap="move"  data-move="4" >
+      <view class="move5" style="{{border[4]}}">
+        <text>运动量</text>
+      </view>
+    </view>
+</view>
+
+<view  wx:for="{{histroyList[showIndex]}}" wx:key="index" class="event">
+  
+  <van-cell-group inset >
+  <van-cell title="{{item.time}}" custom-style="background-color: #476be3;"   />
+  <van-cell   label="{{item.pigHouse}}，{{item.pigNumber}}号猪{{item.value}}." border="{{ false }}"  custom-style="background-color: #efefef;"  />
+</van-cell-group>
+
+</view>

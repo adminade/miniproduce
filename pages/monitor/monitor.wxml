@@ -3,7 +3,6 @@
   <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
 </view> -->
 
-<!-- <ec-canvas id="mychart-dom-multi-bar" canvas-id="mychart-multi-bar" ec="{{ ecBar }}"></ec-canvas> -->
 
 <!--index.wxml-->
 <!-- <scroll-view scroll-y="true" style="height: 100%; width: 100%;" bindscroll="scrollHandler"> -->
@@ -20,11 +19,28 @@
       <text>潜在风险</text>
     </view>
       <view class="buttom">
-        ....
+        <view wx:for="{{thingsList}}" wx:key="index" class="alarm_for"> 
+
+          <view>
+            <text class="alarm_text">{{item.pigNumber}}号猪: {{item.detail}},持续:{{item.durationTime}}小时
+            </text>
+            <view bindtap="goto_deseasezhenduan">
+             <text class="alarm_text"  >- 建议进行疾病诊断 </text>
+            </view>  
+          </view>
+          
+
+
+        </view>
+
+
       </view>
   </view>
 
 </view>
 
 <view class="hi">
+
+  <ec-canvas id="mychart-dom-multi-bar" force-use-old-canvas='true' canvas-id="mychart-multi-bar" ec="{{ ecBar }}"></ec-canvas>
+
 </view>

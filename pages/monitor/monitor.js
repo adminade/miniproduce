@@ -13,6 +13,9 @@ Page({
   data: {
     cateCount:null,
     cateSum:[],
+    fitScore:null,
+    fitCate:[],
+    thingsList:[] ,
     ecBar: {
       onInit: function (canvas, width, height, dpr) {
         const barChart = echarts.init(canvas, null, {
@@ -21,7 +24,12 @@ Page({
           devicePixelRatio: dpr // new
         });
         canvas.setChart(barChart);
-        barChart.setOption(getBarOption());
+        // barChart.setOption(getBarOption());
+        getBarOption().then(option => {
+          barChart.setOption(option);
+        }).catch(err => {
+          console.log(err);
+        });
 
         return barChart;
       }
@@ -57,10 +65,62 @@ Page({
         this.getdata()
   },
   onLoad(options) {
-        // 将 Page 实例保存为全局变量 
         app.globalData.pageInstance = this;
         this.getdata()
+        this.getFitScore()
+        this.getAralm()
+        // this.getFitCate()
+        // 将 Page 实例保存为全局变量 
+        
+      },
+
+goto_deseasezhenduan(){
+  wx.navigateTo({
+    url: '/pages/deseasePredict/deseasePredict',
+  })
+},
+
+
+getAralm(){
+  utils.myRequest({
+    url:'localserver/getAlarm',
+    method:'GET'
+  }).then(res =>{ 
+    // this.gettag(res.data.message)
+    console.log(res.data.message)
+    this.setData({
+      thingsList:[...this.data.thingsList,...res.data.message.slice(0, 3)]
+    })
+  })
+
+
+},
+//getFitscore
+  getFitScore(){
+    utils.myRequest({
+      url:`localserver/getFitScore`,
+      method:'GET'
+    }).then(res =>{
+      // console.log(res.data.message)
+      this.setData({
+        fitScore:100-res.data.message
+      })
+    })
   },
+//getFitCate
+  getFitCate(){
+    const that =this 
+    utils.myRequest({
+      url:`localserver/getFitCate`,
+      method:'GET'
+    }).then(res =>{
+      console.log(res.data.message)
+      that.setData({
+        fitCate:[...this.data.fitCate,res.data.message]
+      })
+    })
+  },
+
   //  获取数据
    getdata(){
     utils.myRequest({
@@ -104,17 +164,16 @@ Page({
     
   },
 
-
-
   onReady() {
   }
 });
 
-
-function getGaugeChart(){
+function getGaugeChart(Page){
+  const pageInstance = app.globalData.pageInstance;
+  console.log(pageInstance.data.fitScore)
   return{
     title: {
-      text: '健康模型',
+      text: '健康度',
       // subtext: 'Fake Data',
       left: 'left'
     },
@@ -151,7 +210,7 @@ function getGaugeChart(){
         show: true
       },
       data: [{
-        value: 88,
+        value: pageInstance.data.fitScore,
         // name: '完成率',
         detail:{
           offsetCenter: ["0", "0%"]
@@ -165,9 +224,18 @@ function getGaugeChart(){
 
 
 function getPieoption(Page){
+  const that =this 
+  utils.myRequest({
+    url:`localserver/getFitScore`,
+    method:'GET'
+  }).then(res =>{
+    // console.log(res.data.message)
+    // that.setData({
+    //   fitScore:100-res.data.message
+    // })
+  })
   const pageInstance = app.globalData.pageInstance;
   console.log(pageInstance.data.cateCount['1'])
-const that = this
 return{
   title: {
     text: '猪只统计',
@@ -221,166 +289,115 @@ return{
 
 }
 
+function getBarOption(Page) {
+  return new Promise((resolve, reject) => {
+  const that =this
+  utils.myRequest({
+    url:`localserver/getFitCate`,
+    method:'GET'
+  }).then(res =>{
+    console.log(res.data.message)
+    // that.setData({
+    //   fitCate:[...this.data.fitCate,res.data.message]
+    // })
+    const score = app.globalData.pageInstance;
+    var pageInstance =res.data.message
+    console.log("pageinstance:\n")
+    console.log(pageInstance)
+     for (let i = 0; i < pageInstance.length; i++) {
+       // Add the second and third element of the current item and set it as the fourth element
+       pageInstance[i][3] =0-(pageInstance[i][1] + pageInstance[i][2]) ;
+     }
+     const yAxisData = pageInstance.map(item => item[0]); // extract first element of each subarray
+     const seriesData = pageInstance.map(item => [item[1], item[2], item[3]]); // extract second, third, and fourth elements of each subarray
+     const option =  {
+       tooltip: {
+         trigger: 'axis',
+         axisPointer: {
+           type: 'shadow'
+         }
+       },
+       legend: {
+         data: ['监控项', '疾病诊断', '健康值']
+       },
+       grid: {
+         left: 20,
+         right: 20,
+         bottom: 15,
+         top: 40,
+         containLabel: true
+       },
+       xAxis: [
+         {
+           type: 'value',
+           axisLine: {
+             lineStyle: {
+               color: '#999'
+             }
+           },
+           axisLabel: {
+             color: '#666'
+           }
+         }
+       ],
+       yAxis: [
+         {
+           type: 'category',
+           axisTick: { show: false },
+           data: yAxisData,
+           axisLine: {
+             lineStyle: {
+               color: '#999'
+             }
+           },
+           axisLabel: {
+             color: '#666'
+           }
+         }
+       ],
+       series: [
+         {
+           name: '监控项',
+           type: 'bar',
+           stack: '总量',
+           label: {
+             normal: {
+               show: true,
+               position: 'inside'
+             }
+           },
+           data: seriesData.map(item => item[0])
+         },
+         {
+           name: '疾病诊断',
+           type: 'bar',
+           label: {
+             normal: {
+               show: true
+             }
+           },
+           data: seriesData.map(item => item[1])
+         },
+         {
+           name: '健康值',
+           type: 'bar',
+           stack: '总量',
+           label: {
+             normal: {
+               show: true,
+               position: 'left'
+             }
+           },
+           data: seriesData.map(item => item[2])
+         }
+       ]
+     };
+     resolve(option)
+    })
+  }).catch(err =>{
+    console.log(err);
+    reject(err);
+  })
 
-function getBarOption() {
-  return {
-    tooltip: {
-      trigger: 'axis',
-      axisPointer: {            // 坐标轴指示器，坐标轴触发有效
-        type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-      }
-    },
-    legend: {
-      data: ['热度', '正面', '负面']
-    },
-    grid: {
-      left: 20,
-      right: 20,
-      bottom: 15,
-      top: 40,
-      containLabel: true
-    },
-    xAxis: [
-      {
-        type: 'value',
-        axisLine: {
-          lineStyle: {
-            color: '#999'
-          }
-        },
-        axisLabel: {
-          color: '#666'
-        }
-      }
-    ],
-    yAxis: [
-      {
-        type: 'category',
-        axisTick: { show: false },
-        data: ['汽车之家', '今日头条', '百度贴吧', '一点资讯', '微信', '微博', '知乎'],
-        axisLine: {
-          lineStyle: {
-            color: '#999'
-          }
-        },
-        axisLabel: {
-          color: '#666'
-        }
-      }
-    ],
-    series: [
-      {
-        name: '热度',
-        type: 'bar',
-        label: {
-          normal: {
-            show: true,
-            position: 'inside'
-          }
-        },
-        data: [300, 270, 340, 344, 300, 320, 310]
-      },
-      {
-        name: '正面',
-        type: 'bar',
-        stack: '总量',
-        label: {
-          normal: {
-            show: true
-          }
-        },
-        data: [120, 102, 141, 174, 190, 250, 220]
-      },
-      {
-        name: '负面',
-        type: 'bar',
-        stack: '总量',
-        label: {
-          normal: {
-            show: true,
-            position: 'left'
-          }
-        },
-        data: [-20, -32, -21, -34, -90, -130, -110]
-      }
-    ]
-  };
 }
 
-function getScatterOption() {
-
-  var data = [];
-  var data2 = [];
-
-  for (var i = 0; i < 10; i++) {
-    data.push(
-      [
-        Math.round(Math.random() * 100),
-        Math.round(Math.random() * 100),
-        Math.round(Math.random() * 40)
-      ]
-    );
-    data2.push(
-      [
-        Math.round(Math.random() * 100),
-        Math.round(Math.random() * 100),
-        Math.round(Math.random() * 100)
-      ]
-    );
-  }
-
-  var axisCommon = {
-    axisLabel: {
-      textStyle: {
-        color: '#C8C8C8'
-      }
-    },
-    axisTick: {
-      lineStyle: {
-        color: '#fff'
-      }
-    },
-    axisLine: {
-      lineStyle: {
-        color: '#C8C8C8'
-      }
-    },
-    splitLine: {
-      lineStyle: {
-        color: '#C8C8C8',
-        type: 'solid'
-      }
-    }
-  };
-
-  return {
-    backgroundColor: '#eee',
-    xAxis: axisCommon,
-    yAxis: axisCommon,
-    legend: {
-      data: ['aaaa', 'bbbb']
-    },
-    visualMap: {
-      show: false,
-      max: 100,
-      inRange: {
-        symbolSize: [20, 70]
-      }
-    },
-    series: [{
-      type: 'scatter',
-      name: 'aaaa',
-      data: data
-    },
-    {
-      name: 'bbbb',
-      type: 'scatter',
-      data: data2
-    }
-    ],
-    animationDelay: function (idx) {
-      return idx * 50;
-    },
-    animationEasing: 'elasticOut'
-  };
-}
